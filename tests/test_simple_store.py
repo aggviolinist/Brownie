@@ -21,3 +21,10 @@ def test_updating_store():
     simple_kasuku.addItemTwo(expected, {"from": account})
     # Assert
     assert 76 == simple_kasuku.getBackGang()
+
+
+# def get_wallet():
+#     if network.show_active() == "development":
+#         return accounts[1]
+#     else:
+#         return accounts.add(config["wallets"]["from_key_two"])

@@ -2,4 +2,4 @@ dotenv: .env
 
 wallets: 
   from_key: ${SEPOLIA_PRIVATE_KEY}
-  from_key: ${GOERLI_PRIVATE_KEY}
+  from_key_two: ${GOERLI_PRIVATE_KEY}

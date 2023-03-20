@@ -1,4 +1,4 @@
-from brownie import accounts, config, storeHere
+from brownie import accounts, config, storeHere, network
 import os
 
 
@@ -43,6 +43,13 @@ def deployment():
 
     Update = simple_store.getBackGang()
     print(Update)
+
+
+def get_wallet():
+    if network.show_active() == "development":
+        return accounts[1]
+    else:
+        return accounts.add(config["wallets"]["GOERLI_PRIVATE_KEY"])
 
 
 def main():

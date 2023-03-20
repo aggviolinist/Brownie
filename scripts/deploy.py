@@ -8,7 +8,7 @@ def deployment():
     print(account)
     print("*******using environment variables*******")
 
-    account = accounts.add(os.getenv("PRIVATE_KEY"))
+    account = accounts.add(os.getenv("SEPOLIA_PRIVATE_KEY"))
     print(account)
 
     print("********using config yaml***************")

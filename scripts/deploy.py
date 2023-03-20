@@ -15,7 +15,7 @@ def deployment():
     account = accounts.add(config["wallets"]["from_key"])
     print(account)
 
-    print("******************************")
+    print("************Creating a contract on the block chain************")
     print("******************************")
     print("******************************")
 
@@ -23,12 +23,26 @@ def deployment():
     simple_store = storeHere.deploy({"from": account})
     print(simple_store)
 
-    print("******************************")
-    print("******************************")
-    print("******************************")
+    print("**********Calling a value that doesnt return a value***********")
+    print("******More of calling a function like we always do*************")
+    print("***************************************************************")
 
     stored_value = simple_store.getBackGang()
     print(stored_value)
+
+    print("**********Updating the transaction on the block chain*********")
+    print("******************************")
+    print("******************************")
+    print("**************************************************************")
+    updated_value = simple_store.addItemTwo(100, {"from": account})
+    updated_value.wait(1)
+    # print(updated_value)
+
+    print("***********New updated value called********************")
+    print("*******************************")
+
+    Update = simple_store.getBackGang()
+    print(Update)
 
 
 def main():

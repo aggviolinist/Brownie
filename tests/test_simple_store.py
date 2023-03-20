@@ -11,8 +11,13 @@ def test_deploy():
     # Assert
     assert starting_value == expected
 
+
 def test_updating_store():
     # Arrange
     account = accounts[4]
+    simple_kasuku = storeHere.deploy({"from": account})
     # Act
-    simple_kasuku = storeHere.
+    expected = 76
+    simple_kasuku.addItemTwo(expected, {"from": account})
+    # Assert
+    assert 76 == simple_kasuku.getBackGang()

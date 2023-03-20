@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 contract storeHere {
-    uint256 storeNum = 1;
+    uint256 storeNum = 21;
 
     struct Kangemi {
         string name;

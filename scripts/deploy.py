@@ -19,7 +19,8 @@ def deployment():
     print("******************************")
     print("******************************")
 
-    account = accounts[2]
+    account = get_wallet()
+
     simple_store = storeHere.deploy({"from": account})
     print(simple_store)
 
@@ -49,7 +50,7 @@ def get_wallet():
     if network.show_active() == "development":
         return accounts[1]
     else:
-        return accounts.add(config["wallets"]["GOERLI_PRIVATE_KEY"])
+        return accounts.add(config["wallets"]["from_key_two"])
 
 
 def main():
